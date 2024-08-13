@@ -198,9 +198,6 @@ for i = 1:length(figHandles)
     % Check if the figure handle is valid and the figure is open
     if ishandle(figHandles(i))
         figureName = sprintf('Figure%d', i);
-        % Save as .fig
-        figPath = fullfile(fullSavePath, [figureName '.fig']);
-        savefig(figHandles(i), figPath);
         % Save as .png
         pngPath = fullfile(fullSavePath, [figureName '.png']);
         saveas(figHandles(i), pngPath);
